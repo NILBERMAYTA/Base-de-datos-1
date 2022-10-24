@@ -5,7 +5,7 @@
 
 Mi nombre es Nilber Mayta Cuno, soy un estudiante de la universidad Franz Tamayo en la carrera de Ingenieria de sistemas. Tengo varias pasiones, una de ellas es Programar.
 
-##🙌Descripcion de repositorio🫥
+## 🙌Descripcion de repositorio🫥
 
 Este es un repositorio dirigido para almacenar y compartir mis practicas de la materia de Base de Datos-I.
 
@@ -17,7 +17,7 @@ Link de repositorio personal
 https://github.com/NILBERMAYTA/Base-de-datos-1
 ```
 
-##💻Lenguajes de desarrollo👻
+## 💻Lenguajes de desarrollo👻
 
 - SQL
 
