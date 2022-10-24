@@ -17,12 +17,23 @@ Link de repositorio personal
 https://github.com/NILBERMAYTA/Base-de-datos-1
 ```
 
+## HITO 1
+```sh
+https://github.com/NILBERMAYTA/Base-de-datos-1/tree/main/Hito%20I
+```
+## HITO 2
+```sh
+https://github.com/NILBERMAYTA/Base-de-datos-1/tree/main/Hito%202
+```
+## HITO 3
+```sh
+https://github.com/NILBERMAYTA/Base-de-datos-1/tree/main/Hito3
+```
+
 ## 💻Lenguajes de desarrollo👻
 
 - SQL
-
 - C#
-
 - C++
 
 
