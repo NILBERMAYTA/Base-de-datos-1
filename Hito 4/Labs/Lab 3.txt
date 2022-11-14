@@ -1,0 +1,180 @@
+create database funtion
+
+use funtion
+
+
+ create function Problema(@num1 integer,@num2 integer,@accion varchar(20))
+
+ returns integer as
+
+ begin
+
+	declare @sum integer;
+
+	if (@accion = 'SUMA')begin
+
+	set @sum = @num1 + @num2 
+	end
+
+	if (@accion = 'RESTA')begin
+
+	set @sum = @num1 - @num2 
+	end
+
+	if (@accion = 'MULTIPLICACION')begin
+
+	set @sum = @num1 * @num2 
+	end
+
+	if (@accion = 'DIVISION')begin
+
+	set @sum = @num1 / @num2 
+	end
+
+	return @sum
+
+ end;
+
+
+
+ select dbo.Problema(5,6,'SUMA') as Suma
+
+ select dbo.Problema(5,6,'RESTA') as Resta
+
+ select dbo.Problema(5,6,'MULTIPLICACION') as Multiplicacion
+
+ select dbo.Problema(5,6,'DIVISION') as Division 
+
+  create function Problemav2(@num1 integer,@num2 integer,@accion varchar(20))
+
+ returns integer as
+
+ begin
+
+	declare @sum integer;
+
+	if (@accion = 'SUMA')begin
+	return @num1 + @num2
+	end
+
+	if (@accion = 'RESTA')begin
+	return @num1 - @num2
+	end
+
+	if (@accion = 'MULTIPLICACION')begin
+	return @num1 * @num2
+	end
+
+	if (@accion = 'DIVISION')begin
+	return @num1 / @num2
+	end
+
+	return 1;
+
+ end;
+
+ select dbo.Problema(5,6,'SUMA') as Suma
+
+ select dbo.Problema(5,6,'RESTA') as Resta
+
+ select dbo.Problema(5,6,'MULTIPLICACION') as Multiplicacion
+
+ select dbo.Problema(5,6,'DIVISION') as Division 
+
+   
+   
+ create function Problemav3(@num1 integer,@num2 integer,@accion varchar(20))
+
+ returns integer as
+
+ begin
+
+	declare @sum integer;
+
+	if (@accion = 'SUMA')begin
+	return @num1 + @num2
+	end
+
+	if (@accion = 'RESTA')begin
+	return @num1 - @num2
+	end
+
+	if (@accion = 'MULTIPLICACION')begin
+	return @num1 * @num2
+	end
+
+	if (@accion = 'DIVISION')begin
+	return @num1 / @num2
+	end
+
+	return 1;
+
+ end;
+
+ use funciones
+
+ select count (*)
+ from estudiantes as est
+ where est.edad > 25
+
+ create function Mayores_Edad(@edad integer)
+ returns integer as
+ begin
+
+	declare @response integer = 0;
+	select @response = count (est.id_est)
+	from estudiantes as est
+	where est.edad > @edad;
+
+ return @response;
+ end;
+
+ select dbo.Mayores_Edad(25) as Mayores
+
+ select count (est.id_est)
+ from estudiantes as est inner join escuela as esc on est.id_esc = est.id_esc
+ where est.edad > 20 and est.genero = 'femenino' and esc.nombre = 'Andres Bello'
+
+
+ create function genro(@edad integer,@genero varchar(20))
+ returns integer as
+ begin
+
+	declare @response integer = 0;
+
+	select @response =  count (est.id_est)
+	from estudiantes as est inner join escuela as esc on est.id_esc = esc.id_esc
+	where est.edad > @edad and est.genero = @genero and esc.nombre = 'Andres Bello'
+
+ return @response;
+ end;
+
+  select dbo.genro(20,'femenino') as Mayores
+
+
+
+select *
+from estudiantes as est
+where est.id_est = 7
+
+select max(est.id_est)
+from estudiantes as est
+
+
+ create function maximo()
+ returns integer as
+ begin
+
+	declare @response integer = 0;
+
+	select @response = max(est.id_est)
+	from estudiantes as est
+	
+
+ return @response;
+ end;
+
+
+ select est.*
+ from estudiantes as est
+ where est.id_est = dbo.maximo();
